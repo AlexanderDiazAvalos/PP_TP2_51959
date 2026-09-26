@@ -165,8 +165,7 @@ public class EventoUniversitario implements Serializable {
 
     public void persistir() throws IOException{
 
-        FileOutputStream fos = new FileOutputStream("F:\\PPUTN\\Paradigamas de Programación\\Elementos Unidad 1\\Prueba 1\\TP2 Ejercicio 3\\gaurdado de prueba eventouniversitario\\" + titulo + ".tata");
-
+        FileOutputStream fos = new FileOutputStream("gaurdado de prueba eventouniversitario\\" + titulo + ".tata");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(this);
         oos.close();
@@ -176,7 +175,7 @@ public class EventoUniversitario implements Serializable {
 
     public static EventoUniversitario recuperar() throws IOException, ClassNotFoundException{
 
-        FileInputStream fis = new FileInputStream("F:\\PPUTN\\Paradigamas de Programación\\Elementos Unidad 1\\Prueba 1\\TP2 Ejercicio 3\\gaurdado de prueba eventouniversitario\\" + "clase jueves.tata");
+        FileInputStream fis = new FileInputStream("gaurdado de prueba eventouniversitario\\" + "clase jueves.tata");
         ObjectInputStream ois = new ObjectInputStream(fis);
         EventoUniversitario obj = (EventoUniversitario)
             ois.readObject();
